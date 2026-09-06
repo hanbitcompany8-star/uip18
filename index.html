@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아이폰 18 사전예약 - LG유플러스 한빛컴퍼니</title>
+    
+    <!-- 폰트: 프리텐다드 -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <!-- 아이콘: FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Pretendard', 'sans-serif'],
+                    },
+                    colors: {
+                        kakao: '#FEE500',
+                        kakaotext: '#191919',
+                        apple: {
+                            50: '#f5f5f7',
+                            900: '#1d1d1f',
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            scroll-behavior: smooth;
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gradient-bg {
+            background: radial-gradient(circle at center, rgba(161, 140, 209, 0.2) 0%, rgba(0, 0, 0, 0) 50%);
+        }
+
+        /* 딜레이 유틸리티 */
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+    </style>
+</head>
+<body class="antialiased relative pb-24">
+
+    <!-- GNB (헤더) -->
+    <header class="fixed top-0 w-full z-50 glass-effect">
+        <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="font-bold text-xl tracking-tight">
+                <span class="text-white">LG유플러스 한빛컴퍼니</span> <span class="text-gray-400 font-light text-sm ml-1">공식 인증점</span>
+            </div>
+            <a href="#benefits" class="text-sm text-gray-300 hover:text-white transition">혜택보기</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 px-4 overflow-hidden min-h-[80vh] flex flex-col justify-center items-center text-center gradient-bg">
+        <!-- 배경 장식 (빛 번짐 효과) -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-600/30 rounded-full blur-[100px] -z-10 animate-pulse-slow"></div>
+        <div class="absolute top-1/3 left-1/3 w-72 h-72 bg-blue-600/20 rounded-full blur-[80px] -z-10"></div>
+
+        <div class="opacity-0 animate-fade-in-up">
+            <h2 class="text-purple-400 font-semibold tracking-widest mb-3 uppercase text-sm lg:text-base">iPhone 18 사전예약</h2>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tighter">
+                가장 완벽한 진화,<br>
+                <span class="gradient-text">누구보다 빠르게.</span>
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto break-keep">
+                혁신적인 기능으로 무장한 새로운 iPhone 18 시리즈. <br class="hidden md:block">
+                LG유플러스 한빛컴퍼니에서 압도적인 혜택과 함께 가장 먼저 만나보세요.
+            </p>
+        </div>
+
+        <div class="opacity-0 animate-fade-in-up delay-200">
+            <!-- 폰 이미지 대체 목업 (단순화된 그래픽) -->
+            <div class="relative w-64 h-[500px] mx-auto rounded-[3rem] border-[8px] border-zinc-800 bg-zinc-900 shadow-2xl overflow-hidden mb-10 flex items-center justify-center">
+                <div class="absolute top-0 w-32 h-7 bg-zinc-800 rounded-b-3xl"></div> <!-- 다이나믹 아일랜드 느낌 -->
+                <div class="text-zinc-700 text-4xl"><i class="fa-brands fa-apple"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Store Introduction -->
+    <section class="py-20 bg-zinc-950 px-4">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl font-bold mb-4">왜 <span class="text-white">LG유플러스 한빛컴퍼니</span>인가요?</h3>
+                <p class="text-gray-400">수만 명의 고객이 선택한 믿을 수 있는 공식 대리점입니다.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="glass-effect p-8 rounded-2xl text-center hover:bg-zinc-800/50 transition">
+                    <div class="w-16 h-16 bg-blue-500/10 text-blue-400 rounded-full flex items-center justify-center text-2xl mx-auto mb-6">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-3">전국 우체국택배 발송</h4>
+                    <p class="text-gray-400 text-sm break-keep">
+                        재고 확보 1위! 출시 기간 빠르게 기기를 받아보실 수 있도록 약속드립니다.
+                    </p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="glass-effect p-8 rounded-2xl text-center hover:bg-zinc-800/50 transition">
+                    <div class="w-16 h-16 bg-purple-500/10 text-purple-400 rounded-full flex items-center justify-center text-2xl mx-auto mb-6">
+                        <i class="fa-solid fa-won-sign"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-3">투명하고 정직한 가격</h4>
+                    <p class="text-gray-400 text-sm break-keep">
+                        숨겨진 조건 없이, 고객님께 꼭 맞는 최적의 요금제와 최대 할인을 정직하게 설계해 드립니다.
+                    </p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="glass-effect p-8 rounded-2xl text-center hover:bg-zinc-800/50 transition">
+                    <div class="w-16 h-16 bg-green-500/10 text-green-400 rounded-full flex items-center justify-center text-2xl mx-auto mb-6">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-3">공식 인증 대리점</h4>
+                    <p class="text-gray-400 text-sm break-keep">
+                        통신사 본사에서 정식으로 인증받은 대리점으로, 개인정보 보호부터 안전한 개통까지 100% 믿고 맡기실 수 있습니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-20 px-4 bg-zinc-900">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-purple-400 font-semibold mb-2 block">Special Offers</span>
+                <h3 class="text-3xl md:text-4xl font-bold mb-4">아이폰 18 단독 사전예약 혜택</h3>
+                <p class="text-gray-400 text-lg">오직 LG유플러스 한빛컴퍼니에서만 누릴 수 있는 특별한 사은품</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Benefit Card 1 -->
+                <div class="bg-zinc-800 rounded-2xl p-8 flex flex-col sm:flex-row items-center gap-6 border border-zinc-700 hover:border-purple-500/50 transition cursor-default">
+                    <div class="w-24 h-24 bg-zinc-900 rounded-xl flex items-center justify-center text-4xl text-gray-200 shadow-inner flex-shrink-0">
+                        <i class="fa-solid fa-headphones"></i>
+                    </div>
+                    <div class="text-center sm:text-left">
+                        <div class="text-purple-400 font-bold text-sm mb-1">혜택 01</div>
+                        <h4 class="text-xl font-bold mb-2">고급 무선 이어폰 증정</h4>
+                        <p class="text-gray-400 text-sm">프리미엄 요금제 개통 시, 완벽한 사운드를 위한 무선 이어폰(또는 에어팟 프로 혜택)을 제공합니다.</p>
+                    </div>
+                </div>
+
+                <!-- Benefit Card 2 -->
+                <div class="bg-zinc-800 rounded-2xl p-8 flex flex-col sm:flex-row items-center gap-6 border border-zinc-700 hover:border-purple-500/50 transition cursor-default">
+                    <div class="w-24 h-24 bg-zinc-900 rounded-xl flex items-center justify-center text-4xl text-gray-200 shadow-inner flex-shrink-0">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                    </div>
+                    <div class="text-center sm:text-left">
+                        <div class="text-purple-400 font-bold text-sm mb-1">혜택 02</div>
+                        <h4 class="text-xl font-bold mb-2">액세서리 패키지</h4>
+                        <p class="text-gray-400 text-sm">기본 개통 고객 전원에게 케이스, 초고속 충전기, 프리미엄 보호필름 세트를 100% 증정합니다.</p>
+                    </div>
+                </div>
+
+                <!-- Benefit Card 3 -->
+                <div class="bg-zinc-800 rounded-2xl p-8 flex flex-col sm:flex-row items-center gap-6 border border-zinc-700 hover:border-purple-500/50 transition cursor-default">
+                    <div class="w-24 h-24 bg-zinc-900 rounded-xl flex items-center justify-center text-4xl text-gray-200 shadow-inner flex-shrink-0">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                    </div>
+                    <div class="text-center sm:text-left">
+                        <div class="text-purple-400 font-bold text-sm mb-1">혜택 03</div>
+                        <h4 class="text-xl font-bold mb-2">기존 스마트폰 최고가 보상</h4>
+                        <p class="text-gray-400 text-sm">사용하시던 중고폰을 시세보다 높은 금액으로 매입하여 새 폰 구매 부담을 확 낮춰드립니다.</p>
+                    </div>
+                </div>
+
+                <!-- Benefit Card 4 -->
+                <div class="bg-zinc-800 rounded-2xl p-8 flex flex-col sm:flex-row items-center gap-6 border border-zinc-700 hover:border-purple-500/50 transition cursor-default">
+                    <div class="w-24 h-24 bg-zinc-900 rounded-xl flex items-center justify-center text-4xl text-gray-200 shadow-inner flex-shrink-0">
+                        <i class="fa-solid fa-gift"></i>
+                    </div>
+                    <div class="text-center sm:text-left">
+                        <div class="text-purple-400 font-bold text-sm mb-1">혜택 04</div>
+                        <h4 class="text-xl font-bold mb-2">시크릿 추가 사은품</h4>
+                        <p class="text-gray-400 text-sm">카카오톡 채널을 통해 예약하시고 개통하시는 분들께 추첨/선착순을 통한 시크릿 혜택을 드립니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 text-center text-zinc-500 text-sm px-4">
+        <p class="mb-2">상호 : 한빛컴퍼니 | 대표 : 김영주 | 사업자등록번호 : 652-06-01248</p>
+        <p class="mb-4">주소 : 경북 구미시 신시로 49 | 고객센터 : 010-7715-8981</p>
+        <p>&copy; 2026 한빛컴퍼니. All rights reserved.</p>
+    </footer>
+
+    <!-- 하단 고정 카카오톡 신청 버튼 (Mobile & Web) -->
+    <div class="fixed bottom-0 left-0 w-full p-4 glass-effect z-50 border-t border-zinc-800/50 shadow-[0_-10px_30px_rgba(0,0,0,0.5)]">
+        <div class="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="hidden sm:block text-left">
+                <p class="font-bold text-white text-lg">재고 소진 전 빠르게 신청하세요!</p>
+                <p class="text-xs text-gray-400">1분이면 사전예약 접수가 완료됩니다.</p>
+            </div>
+            
+            <!-- 카카오톡 채널 링크를 아래 href에 입력하세요 -->
+            <a href="https://pf.kakao.com/_xxxxxx" target="_blank" class="w-full sm:w-auto bg-kakao text-kakaotext flex items-center justify-center gap-2 py-4 px-8 rounded-xl font-bold text-lg hover:bg-yellow-300 transition shadow-lg transform hover:scale-105 active:scale-95">
+                <i class="fa-solid fa-comment"></i>
+                카카오톡으로 신청하기
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
