@@ -30,11 +30,16 @@
                     animation: {
                         'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
                         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
                     },
                     keyframes: {
                         fadeInUp: {
                             '0%': { opacity: '0', transform: 'translateY(20px)' },
                             '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
                         }
                     }
                 }
@@ -70,6 +75,11 @@
         .delay-100 { animation-delay: 100ms; }
         .delay-200 { animation-delay: 200ms; }
         .delay-300 { animation-delay: 300ms; }
+        
+        /* 이미지 그림자 효과 */
+        .image-glow {
+            filter: drop-shadow(0 0 30px rgba(161, 140, 209, 0.4));
+        }
     </style>
 </head>
 <body class="antialiased relative pb-24">
@@ -103,10 +113,9 @@
         </div>
 
         <div class="opacity-0 animate-fade-in-up delay-200">
-            <!-- 폰 이미지 대체 목업 (단순화된 그래픽) -->
-            <div class="relative w-64 h-[500px] mx-auto rounded-[3rem] border-[8px] border-zinc-800 bg-zinc-900 shadow-2xl overflow-hidden mb-10 flex items-center justify-center">
-                <div class="absolute top-0 w-32 h-7 bg-zinc-800 rounded-b-3xl"></div> <!-- 다이나믹 아일랜드 느낌 -->
-                <div class="text-zinc-700 text-4xl"><i class="fa-brands fa-apple"></i></div>
+            <!-- 첨부된 이미지로 교체된 부분 -->
+            <div class="relative max-w-3xl mx-auto mb-10 animate-float image-glow">
+                <img src="iphone18.jpeg" alt="iPhone 18 디자인 라인업" class="w-full h-auto rounded-3xl object-contain border border-zinc-800/50">
             </div>
         </div>
     </section>
@@ -231,7 +240,7 @@
             </div>
             
             <!-- 카카오톡 채널 링크를 아래 href에 입력하세요 -->
-            <a href="http://pf.kakao.com/_rExbYG/chat" target="_blank" class="w-full sm:w-auto bg-kakao text-kakaotext flex items-center justify-center gap-2 py-4 px-8 rounded-xl font-bold text-lg hover:bg-yellow-300 transition shadow-lg transform hover:scale-105 active:scale-95">
+            <a href="https://pf.kakao.com/_xxxxxx" target="_blank" class="w-full sm:w-auto bg-kakao text-kakaotext flex items-center justify-center gap-2 py-4 px-8 rounded-xl font-bold text-lg hover:bg-yellow-300 transition shadow-lg transform hover:scale-105 active:scale-95">
                 <i class="fa-solid fa-comment"></i>
                 카카오톡으로 신청하기
             </a>
